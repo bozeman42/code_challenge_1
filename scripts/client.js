@@ -8,12 +8,14 @@ function main(){
   addClickHandlers();
 }
 
+// adds click handlers
 function addClickHandlers(){
   $('#generateBtn').on('click',addDiv);
   $('#output').on('click','.swapBtn',swapColors);
   $('#output').on('click','.deleteBtn',deleteDiv);
 }
 
+// appends divs to the DOM
 function addDiv(){
   count++;
   var $div = $('<div class="generatedDiv"></div>');
@@ -24,6 +26,7 @@ function addDiv(){
   $('#output').append($div);
 }
 
+// swaps colors of div containing clicked swap button
 function swapColors() {
   var $thisDiv = $(this).parent();
   if ($thisDiv.css('background-color') === 'rgb(255, 0, 0)'){
@@ -33,6 +36,7 @@ function swapColors() {
   }
 }
 
+// deletes div containing clicked delete button
 function deleteDiv() {
  $(this).parent().remove();
 }
