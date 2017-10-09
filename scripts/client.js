@@ -30,5 +30,5 @@ function swapColors() {
 }
 
 function deleteDiv() {
-  console.log(this);
+ $(this).parent().remove();
 }
