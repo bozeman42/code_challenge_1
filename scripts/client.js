@@ -25,7 +25,8 @@ function addDiv(){
 }
 
 function swapColors() {
-  console.log(this);
+  var $thisDiv = $(this).parent();
+  $thisDiv.css('background-color','yellow');
 }
 
 function deleteDiv() {
