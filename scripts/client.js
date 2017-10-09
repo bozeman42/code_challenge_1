@@ -26,7 +26,13 @@ function addDiv(){
 
 function swapColors() {
   var $thisDiv = $(this).parent();
-  $thisDiv.css('background-color','yellow');
+  console.log($thisDiv.css('background-color'))
+  if ($thisDiv.css('background-color') === 'rgb(255, 0, 0)'){
+    $thisDiv.css('background-color','yellow');
+  } else {
+    $thisDiv.css('background-color','red');
+  }
+  console.log($thisDiv.css('background-color') === 'rgb(255, 255, 0)');
 }
 
 function deleteDiv() {
