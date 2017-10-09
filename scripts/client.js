@@ -1,6 +1,8 @@
 console.log('js sourcded');
 $(document).ready(main);
 
+var count = 0;
+
 function main(){
   console.log('jquery document loaded');
   addClickHandlers();
@@ -11,6 +13,9 @@ function addClickHandlers(){
 }
 
 function addDiv(){
-  var $div = $('<div>Heeeey</div>');
+  count++;
+  var $div = $('<div></div>');
+  var $counter = $('<p>'+ count +'</p>');
+  $div.append($counter);
   $('#output').append($div);
 }
